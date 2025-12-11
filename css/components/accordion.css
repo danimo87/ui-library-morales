@@ -1,0 +1,64 @@
+/* --- ACORDEÓN --- */
+.accordion-item {
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+/* Header del acordeón */
+.accordion-header {
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary)20%, transparent);
+    color: var(--text-light);
+    padding: 18px 22px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, text-shadow 0.3s;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    text-shadow: var(--neon-secondary);
+}
+
+/* Icono + rotación */
+.icon {
+    font-size: 1.2rem;
+    transition: transform .3s ease, color .3s;
+    color: var(--secondary);
+}
+
+.accordion-header.active .icon {
+    transform: rotate(45deg);
+    color: var(--primary);
+}
+
+/* Contenido interno */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--bg-dark-2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: max-height .35s ease;
+}
+
+.accordion-content p {
+    padding: 16px 22px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Efecto Glow suave */
+.accordion-item:hover {
+    box-shadow: var(--neon-primary);
+}

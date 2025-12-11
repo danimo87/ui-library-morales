@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Library - Demo</title>
+
+    <!-- Tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/tooltip.css">
+    <link rel="stylesheet" href="css/components/alerts.css">
+    <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="navbar__logo">
+            UI<span>LIBRARY</span>
+        </a>
+
+        <nav class="navbar__links">
+            <a href="#botones" class="nav-link">Botones</a>
+            <a href="#cards" class="nav-link">Cards</a>
+            <a href="#formularios" class="nav-link">Formularios</a>
+            <a href="#modal" class="nav-link">Modal</a>
+            <a href="#alertas" class="nav-link">Alertas</a>
+            <a href="#acordeon" class="nav-link">Acordeón</a>
+        </nav>
+
+        <button class="navbar__toggle">☰</button>
+    </header>
+
+    <main class="container">
+
+        <!-- BOTONES -->
+        <section id="botones">
+            <h2>Botones</h2>
+            <button class="btn btn--primary">Primario</button>
+            <button class="btn btn--secondary">Secundario</button>
+            <button class="btn" disabled>Disabled</button>
+            <button class="btn btn--secondary" data-tooltip="¡Este es un tooltip!">
+                Pasa el mouse aquí
+            </button>
+        </section>
+
+        <!-- CARDS -->
+        <section id="cards">
+            <h2>Tarjetas</h2>
+            <div class="card">
+                <h3 class="card__title">Título de la tarjeta</h3>
+                <p class="card__text">Contenido de ejemplo para la tarjeta.</p>
+                <button class="btn btn--primary">Acción</button>
+            </div>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="formularios">
+            <h2>Formulario</h2>
+            <form class="form">
+                <input type="text" placeholder="Nombre" class="form__input">
+                <select class="form__input">
+                    <option>Selecciona una opción</option>
+                </select>
+                <textarea class="form__input" placeholder="Mensaje"></textarea>
+            </form>
+        </section>
+
+        <!-- MODAL -->
+        <section id="modal">
+            <h2>Modal</h2>
+            <button id="openModal" class="btn btn--primary">Abrir Modal</button>
+
+            <div id="modalContainer" class="modal">
+                <div class="modal__content">
+                    <h3>Ventana Modal</h3>
+                    <p>Esto es un ejemplo de modal.</p>
+                    <button id="closeModal" class="btn btn--secondary">Cerrar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALERTAS -->
+        <section id="alertas">
+            <h2>Alertas</h2>
+            <div class="alert alert--success">Éxito: Acción realizada correctamente.</div>
+            <div class="alert alert--warning">Advertencia: Revisa tu información.</div>
+            <div class="alert alert--danger">Error: Algo salió mal.</div>
+        </section>
+
+        <!-- ACORDEÓN -->
+        <section id="acordeon">
+            <h2>Acordeón</h2>
+            
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Título de la Sección 1
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Este es el contenido oculto de la primera sección. Aquí puedes poner texto, imágenes o lo que necesites explicar.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Título de la Sección 2
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Aquí va el contenido de la segunda sección. El acordeón es útil para ahorrar espacio en la pantalla.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Carga UN SOLO JS -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

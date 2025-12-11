@@ -1,0 +1,48 @@
+/* Tooltip */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+/* El mensajito (oculto por defecto) */
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Toma el texto del HTML */
+    position: absolute;
+    bottom: 125%; /* Aparece arriba del elemento */
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: var(--primary);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: var(--neon-shadow);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* La flechita del tooltip */
+[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    border: 6px solid transparent;
+    border-top-color: var(--primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+/* Mostrar al pasar el mouse */
+[data-tooltip]:hover::after,
+[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+}

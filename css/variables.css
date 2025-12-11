@@ -1,0 +1,17 @@
+:root {
+    --primary: #6c63ff;
+    --secondary: #00eaff;
+
+    --bg-dark: #0a0a0f;
+    --bg-card: #12121a;
+
+    --text-light: #f0f0f5;
+    --text-gray: #9c9c9c;
+
+    --radius: 12px;
+    --transition: .3s ease;
+
+    --neon-shadow: 
+        0 0 10px rgba(108, 99, 255, .7),
+        0 0 20px rgba(0, 234, 255, .5);
+}

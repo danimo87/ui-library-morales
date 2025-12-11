@@ -1,0 +1,37 @@
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    backdrop-filter: blur(5px);      /* Efecto borroso moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+/* Clase activa desde JS */
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal__content {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--primary);
+    box-shadow: var(--neon-shadow); /* Sombra neón */
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.8);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.modal.show .modal__content {
+    transform: scale(1);
+}

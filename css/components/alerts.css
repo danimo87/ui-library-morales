@@ -1,0 +1,35 @@
+/* Alertas */
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    background: var(--bg-card);
+    color: var(--text-light);
+    border-left: 4px solid var(--secondary); /* Borde por defecto */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    animation: slideIn 0.4s ease;
+}
+
+/* Variantes de color Neón */
+.alert--success {
+    border-color: #00ff9d; /* Verde Neón */
+    background: linear-gradient(90deg, rgba(0, 255, 157, 0.1) 0%, transparent 100%);
+}
+
+.alert--warning {
+    border-color: #ffea00; /* Amarillo Neón */
+    background: linear-gradient(90deg, rgba(255, 234, 0, 0.1) 0%, transparent 100%);
+}
+
+.alert--danger {
+    border-color: #ff0055; /* Rojo/Rosado Neón */
+    background: linear-gradient(90deg, rgba(255, 0, 85, 0.1) 0%, transparent 100%);
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

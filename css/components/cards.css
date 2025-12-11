@@ -1,0 +1,24 @@
+/* Tarjetas de contenido */
+.card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary); /* El borde se ilumina al pasar el mouse */
+}
+
+.card__title {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card__text {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}

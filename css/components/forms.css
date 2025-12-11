@@ -1,0 +1,46 @@
+/* Contenedor del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+}
+
+/* Inputs, Selects y Textareas */
+.form__input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05); /* Fondo oscuro sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+/* Efecto NEÓN al hacer click (Focus) */
+.form__input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5); /* Brillo morado */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Texto de ayuda (Placeholder) */
+.form__input::placeholder {
+    color: var(--text-gray);
+    opacity: 0.7;
+}
+
+/* Ajuste específico para Select */
+select.form__input option {
+    background-color: var(--bg-card); /* Para que el menú desplegable sea oscuro */
+    color: var(--text-light);
+}
+
+/* Ajuste para el área de texto grande */
+textarea.form__input {
+    resize: vertical;
+    min-height: 120px;
+}
