@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UI Library - Daniel Morales
 
 Esta es una librería de componentes de interfaz de usuario (UI) diseñada para ser reutilizable, moderna y responsive. Incluye elementos esenciales para el desarrollo web con un diseño oscuro (Dark Mode) y acentos de color neón.
@@ -24,3 +25,7 @@ El proyecto cuenta con las siguientes secciones:
 
 ---
 **Autor:** Daniel Morales
+=======
+# ui-library-morales
+ui-library-morales
+>>>>>>> 9681e0de6590abb5ccdf40653d0f10c5ed1d4c26
